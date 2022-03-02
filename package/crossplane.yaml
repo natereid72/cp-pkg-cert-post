@@ -1,0 +1,21 @@
+apiVersion: meta.pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: provider-gcp
+spec:
+  crossplane:
+    version: ">=v1.0.0"
+  controller:
+    image: crossplane/provider-gcp-controller:v0.14.0
+    permissionRequests:
+    - apiGroups:
+      - apiextensions.crossplane.io
+      resources:
+      - compositions
+      verbs:
+      - get
+      - list
+      - create
+      - update
+      - patch
+      - watch
