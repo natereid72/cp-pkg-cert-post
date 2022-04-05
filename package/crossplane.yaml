@@ -4,7 +4,7 @@ metadata:
   name: provider-gcp
 spec:
   crossplane:
-    version: ">=v1.0.0"
+    version: ">=v1.0.0-0"
   controller:
     image: core.harbor.domain/crossplane/provider-gcp-controller:v0.14.0
     permissionRequests:
